@@ -1,8 +1,4 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 //arreglos de hexagramas
 var line_values = [];
@@ -20,6 +16,25 @@ function onFocusInput(e) {
 
 function onBlurInput(e) {
     e.placeholder = '2';
+}
+
+function random(){
+    let num1 = document.getElementById("digit_1");
+    let num2 = document.getElementById("digit_2");
+    let num3 = document.getElementById("digit_3");
+    let n1 = Math.floor(Math.random() * (4-2))+2
+    let n2 = Math.floor(Math.random() * (4-2))+2
+    let n3 = Math.floor(Math.random() * (4-2))+2
+
+    num1.value = n1
+    num2.value = n2
+    num3.value = n3
+
+    addLine()
+
+    // num1.value = n1
+    // num2.value = n2
+    // num3.value = n3
 }
 
 function addLine() {
